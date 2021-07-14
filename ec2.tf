@@ -14,6 +14,6 @@ resource "aws_instance" "demoec2" {
         sudo echo this is from $(hostname)>/var/www/html/index.html
   EOF
   tags = {
-    "Name" = "Demo EC2 ${index+1}"
+    "Name" = "Demo EC2 ${count.index+1}"
   }
 }
