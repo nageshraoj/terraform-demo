@@ -4,7 +4,7 @@ resource "aws_instance" "demoec2" {
   subnet_id = aws_subnet.demosubnet.id
   vpc_security_group_ids = [ aws_security_group.demosg.id ]
   key_name = "nagesh"
-  count = 3
+  count = 1
   user_data = <<EOF
         #!/bin/bash
         sudo yum update -y
