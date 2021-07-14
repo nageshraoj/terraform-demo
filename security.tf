@@ -19,7 +19,7 @@ resource "aws_security_group" "demosg" {
   } 
 
   egress {
-    cidr_blocks = [ "value" ]
+    cidr_blocks = [ "0.0.0.0/0" ]
     description = "Allow all outbound traffic"
     from_port = 0
     protocol = "-1"
